@@ -19,6 +19,3 @@ A full-stack task management application built with React, Node.js, Express, and
 2. Install dependencies
 3. Add .env
 4. Run backend & frontend
-
-## Author
-Hitesh Kumar Khatri
