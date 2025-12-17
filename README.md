@@ -1,4 +1,4 @@
-# Task Dashboard App
+# Task Management App
 
 A full-stack task management application built with React, Node.js, Express, and MongoDB.
 
