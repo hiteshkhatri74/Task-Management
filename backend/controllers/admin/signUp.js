@@ -45,7 +45,7 @@ const signUp = async (req,res) => {
         const tokenOption = {
             httpOnly : true,                       // Cookie not accessible by JS
             secure : true,                         // Works only on HTTPS
-            samesite : 'None',                     // Allows cross-site cookies
+            sameSite : 'None',                     // Allows cross-site cookies
             maxAge : 24 * 60 * 60 * 1000           // 1 day expiry
         }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Eye, EyeOff } from 'lucide-react';
@@ -135,12 +135,7 @@ const SignUp = () => {
 
             <div className='w-full text-left text-sm px-2 mb-3'>
             <p> Already have an account ? {" "}
-                    <a 
-                        href={`${process.env.REACT_APP_FRONTEND_URL}/signin`}
-                        className='text-red-400 hover:text-red-600'
-                    >
-                        Login
-                    </a>
+                    <Link to="/signin" className='text-red-400 hover:text-red-600' >Login</Link>
             </p>
             </div>
 

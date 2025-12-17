@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Eye, EyeOff } from 'lucide-react';
@@ -42,7 +42,7 @@ const SignIn = () => {
             }
         }
         catch(err) {
-            toast.error("Server Error. Try again later");
+            toast.error(err.response?.data?.message || "Server Error. Try again later");
         }
     }
 
@@ -92,12 +92,7 @@ const SignIn = () => {
 
             <div className='w-full text-left text-sm px-2 mb-3'>
             <p> Don't have an account ? {" "}
-                    <a 
-                        href={`${process.env.REACT_APP_FRONTEND_URL}/signup`}
-                        className='text-red-400 hover:text-red-600'
-                    >
-                        SignUp
-                    </a>
+                    <Link to="/signup" className="text-red-400 hover:text-red-600" >SignUp</Link>
             </p>
             </div>
 
